@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css_file.css">
+  <title>IR Spectroscopy</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+  <html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Virtual Lab</div>
+        <i class='bx bx-menu' id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search...">
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="index.html">
+            <i class='bx bx-grid-alt'></i>
+            <span class="links_name">Aim</span>
+          </a>
+          <span class="tooltip">Aim</span>
+        </li>
+        <li>
+          <a href="theory.html">
+            <i class='bx bx-user'></i>
+            <span class="links_name">Theory</span>
+          </a>
+          <span class="tooltip">Theory</span>
+        </li>
+        <li>
+          <a href="study.html">
+            <i class='bx bx-chat'></i>
+            <span class="links_name">Study the absorption of the functional groups</span>
+          </a>
+          <span class="tooltip">Study the absorption of the functional groups</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-pie-chart-alt-2'></i>
+            <span class="links_name">Simulation</span>
+          </a>
+          <span class="tooltip">Simulation</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-folder'></i>
+            <span class="links_name">Quiz</span>
+          </a>
+          <span class="tooltip">Quiz</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-cart-alt'></i>
+            <span class="links_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-heart'></i>
+            <span class="links_name">Saved</span>
+          </a>
+          <span class="tooltip">Saved</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-cog'></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <!--<img src="profile.jpg" alt="profileImg">-->
+            <div class="name_job">
+              <div class="name">Prem Shahi</div>
+              <div class="job">Web designer</div>
+            </div>
+          </div>
+          <i class='bx bx-log-out' id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <!-- <div class="aim"><h1 style="text-align: center;">Four main regions of an IR-Spectrum</h1>
+          <div class="container">
+              <a id="area1" class="area11">The bands are attributed to single bonds to hydrogen e.g. C-H,O-H and N-H. The
+                  bands of O-H and N-H are broad due to hydrogen bonds.</a>
+              <a id="area2" class="area22">The bands are attributed to triple bonds e.g. C=C, C=N and X=Y=Z</a>
+              <a id="area3" class="area33">The bands are attributed to double bonds e.g. C=C, C=O and C=N The bonds of an
+                  aromatic ring appear at lower frequencies, due to the increased single bond character of the conjugated
+                  system.</a>
+              <a id="area4" class="area44">
+                  This is the fingerprint region. This region is unique for every compound. It includes stretching,
+                  scissoring, bending and rotating vibrations. It is very hard to interpret this data.</a>
+              <img src="icons/ir_regions.png" class="image"></img>
+            </div>
+        </div> -->
+      <div class="aim">
+        <h2 style="text-align: center;">Identify the bands</h2>
+        <h3>Aim: </h3>
+        <p> &nbsp The aim of this set of tasks is to give students the opportunity to identify the most significant bands of any
+        IR spectrum by interpreting different IR spectra of a variety of organic compounds.
+        Learning outcomes:
+        After completing this set of tasks, students will be able to:
+        1. match the most significant absorption bands with the corresponding functional groups;
+        2. calculate the degree of unsaturation and understand its importance in IR spectroscopy;
+        3. apply the knowledge from previous tasks in order to identify the absorption bands of an IR spectrum; and
+        4. know important details about the characteristics of the most common absorption bands and their functional
+        groups.
+      </p>
+
+      </div>
+    </section>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();//calling the function(optional)
+      });
+
+      searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+        }
+      }
+      $(function () {
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
+  </body>
+
+  </html>
+
+
+
+
+</body>
+
+</html>
